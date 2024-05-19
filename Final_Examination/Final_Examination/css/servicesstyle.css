@@ -1,0 +1,223 @@
+body {
+    background: fixed;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Förhindra horisontell skrollning */
+}
+
+header {
+    position: relative;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+    color: white;
+    background-color: #61017975;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 60px;
+    /* Initial width when collapsed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(246, 246, 246, 0.9);
+    padding-top: 20px;
+    border-right: 2px solid #ddd;
+    transition: width 0.3s, opacity 0.3s;
+    /* Smooth transition */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    opacity: 1; /* Initial opacity */
+    z-index: 2; /* Placera bakgrunden bakom texten */
+}
+
+.sidebar:hover a {
+    padding-left: 20px;
+    /* Adjust padding when hovered */
+    opacity: 1; /* Full opacity when hovered */
+}
+
+.sidebar:hover {
+    width: 200px;
+    /* Width when hovered */
+    opacity: 1; /* Full opacity when hovered */
+}
+
+.Profile {
+    position: absolute;
+    bottom: 20px;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    transition: left 0.3s;
+}
+
+.sidebar:hover .Profile {
+    left: 20px;
+    /* Adjust position when hovered */
+}
+
+.Profile img {
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-image: url('../img/profile.gif');
+}
+
+.sidebar a {
+    display: block;
+    position: relative;
+    padding-left: 5px !important; /* !important för att ge överlägsenhet */
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: flex; /* Use flexbox to align items */
+    align-items: center;
+    white-space: nowrap; /* Prevent text wrap */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis */
+    transition: padding 0.3s, opacity 0.3s !important; /* Smooth transition */
+    opacity: 1; /* Initial opacity */
+}
+
+.sidebar a:hover {
+    padding-left: 20px !important; /* !important för att ge överlägsenhet */
+    /* Adjust padding when hovered */
+    opacity: 1 !important; /* Full opacity when hovered */
+}
+
+.sidebar img {
+    width: 100%;
+    height: 100%;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* Specify opacity for the image */
+    opacity: 1;
+}
+
+
+.nav-icon {
+    width: 24px; /* Adjust size of the icon */
+    height: 24px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    /* Adjust size of the icon */
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    margin-left: 80px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.sidebar:hover ~ .content {
+    margin-left: 220px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} 
+
+.service-item {
+    width: calc(25% - 20px);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.service-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgba(122, 0, 153, 0.432);
+    height: 100px;
+    z-index: -2;
+}
+
+.offer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.services-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.services-container button:hover {
+    background-color: #013804;
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <section class="Login_Button">
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+    </section>
+
+
+    <div id="id01" class="modal1">
+
+        <form class="modal-content animate" method="post" name="myForm">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+                <p><b>Username</b></p>
+                <input type="text" id="userName" placeholder="Enter Username" name="uname" required>
+
+                <p><b>password</b></p>
+                <input type="password" id="userPsw" placeholder="Enter Password" name="psw" required>
+
+                <!-- här är den viktigaste skillnaden för att kunna se vad som händer: event.preventDefault(); gör att ett formulärs "vanliga" beteende åsidosätt, och förhindrar uppdatering -->
+                <button onclick="event.preventDefault(); SaveName()">Register</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <div id="id02" class="modal2">
+
+        <form class="modal-content animate" method="post" name="myForm">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+                <p><b>Username</b></p>
+                <input type="text" id="userName2" placeholder="Enter Username" name="uname" required>
+
+                <p><b>password</b></p>
+                <input type="password" id="userPsw2" placeholder="Enter Password" name="psw" required>
+
+                <!-- här är den viktigaste skillnaden för att kunna se vad som händer: event.preventDefault(); gör att ett formulärs "vanliga" beteende åsidosätt, och förhindrar uppdatering -->
+                <button onclick="event.preventDefault(); Login()">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <body>
+        <header>
+            <h2 class="title">Min Sida</h2>
+        </header>
+    
+        <nav class="sidebar">
+            <a href="index.html"><img src="img/home.png" alt="Home Icon" class="nav-icon"> Home</a>
+            <a href="about.html"><img src="img/info.png" alt="About Icon" class="nav-icon"> About</a>
+            <a href="services.html"><img src="img/Shop.png" alt="Services Icon" class="nav-icon"> Services</a>
+            <a href="contact.html"><img src="img/email.png" alt="Contact Icon" class="nav-icon"> Contact</a>
+            <div class="Profile">
+                <img src="img/profile.gif" alt="Profile Image">
+                <a href="login.html" id="User">Sign In/Up</a>
+            </div>
+        </nav>
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
