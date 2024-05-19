@@ -340,11 +340,9 @@ span.psw {
 
 footer {
     display: flex;
-    justify-content: center; /* Centrera horisontellt */
-    align-items: center; /* Centrera vertikalt */
-    height: 100px; /* Justera höjden efter behov */
-    background-color: rgba(113, 0, 206, 0.205); /* Grå bakgrundsfärg */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgba(122, 0, 153, 0.432);
+    height: 100px;
+    z-index: -2;
 }

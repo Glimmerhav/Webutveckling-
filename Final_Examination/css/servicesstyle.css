@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Förhindra horisontell skrollning */
 }
 
 header {
@@ -24,6 +25,7 @@ header {
     color: white;
     background-color: #61017975;
     width: 100%;
+    padding: 20px 0;
 }
 
 .sidebar {
@@ -138,6 +140,21 @@ header {
     color: white;
 }
 
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
 .content {
     flex: 1;
     margin-left: 80px;
@@ -149,14 +166,59 @@ header {
     margin-left: 220px;
 }
 
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} 
+
+.service-item {
+    width: calc(25% - 20px);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.service-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:  rgba(122, 0, 153, 0.432);
     height: 100px;
-    background-color: rgba(113, 0, 206, 0.205);
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    z-index: 1; /* Ensure the footer is above the sidebar */
+    z-index: -2;
 }
+
+
+.offer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.services-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.services-container button:hover {
+    background-color: #013804;
+}
+

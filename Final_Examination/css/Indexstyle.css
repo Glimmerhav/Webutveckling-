@@ -24,6 +24,7 @@ header {
     color: white;
     background-color: #61017975;
     width: 100%;
+    padding: 20px 0;
 }
 
 .sidebar {
@@ -138,6 +139,21 @@ header {
     color: white;
 }
 
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
 .content {
     flex: 1;
     margin-left: 80px;
@@ -145,17 +161,36 @@ header {
     transition: margin-left 0.3s;
 }
 
-.sidebar:hover~.content {
+.sidebar:hover ~ .content {
     margin-left: 220px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.centered-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:  rgba(122, 0, 153, 0.432);
     height: 100px;
-    background-color: rgba(113, 0, 206, 0.205);
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+    z-index: -2;
 }
+

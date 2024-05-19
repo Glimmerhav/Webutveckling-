@@ -114,7 +114,6 @@ header {
     opacity: 1;
 }
 
-
 .nav-icon {
     width: 24px; /* Adjust size of the icon */
     height: 24px;
@@ -132,24 +131,29 @@ header {
     background-repeat: no-repeat;
 }
 
-
 .sidebar a:hover {
     background-color: #555;
     color: white;
 }
 
 .content {
-    flex: 1;
-    margin-left: 80px;
+    margin: 0 auto; /* Lägger till en automatisk margin för att centrerar innehållet */
+    width: 75%; /* Justerar bredden för att se bra ut på olika skärmstorlekar */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    transition: margin-left 0.3s;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .sidebar:hover ~ .content {
-    margin-left: 220px;
+    margin-left: auto;
 }
 
 form {
+    margin: 0 auto; /* Centrerar formuläret */
+    width: 50%; /* Justera bredden för formuläret */
     display: flex;
     flex-direction: column;
 }
@@ -187,9 +191,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(122, 0, 153, 0.432);
     height: 100px;
-    background-color: rgba(113, 0, 206, 0.205);
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+    z-index: -2;
 }
